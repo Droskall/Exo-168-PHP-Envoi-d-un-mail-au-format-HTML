@@ -8,9 +8,11 @@
  */
 
 $to = [
-    'j.conan@fondationface.org',
-    ...
+    'damienolivierdo511@gmail.com',
+    'damien.olivier.do@gmail.com'
 ];
+
+$suject = 'News';
 
 $html = '
     <html lang="fr">
@@ -20,8 +22,19 @@ $html = '
         <body>
             <div>
                 <!-- Vos actualités ici -->
+                Mes actus du jour
             </div>
         </body>
     </html>
 ';
+
+mail((string)$to, $suject, $html);
+
+if ($to === true){
+    echo "ok";
+}
+else {
+    echo "non";
+}
+
 
